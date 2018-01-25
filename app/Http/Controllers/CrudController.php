@@ -20,9 +20,15 @@ class CrudController extends Controller
     {
         //
 
-        $data = Auth::user()->products;
+        if(\Auth::check()){
 
-        return view('UserView', compact('data'));
+            $data = Auth::user()->products;
+
+            return view('UserView', compact('data'));
+        }
+        else{
+            return redirect('login');
+        }
     }
 
     /**

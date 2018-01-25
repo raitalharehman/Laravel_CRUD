@@ -79,7 +79,7 @@
                 <div class="col s4">
                     <button type="submit" href="/user.store" class="btn btn-success"><span class="text-capitalize" style="font-weight: bold;">Add Product</span>
                     </button>
-                    <a href="/user">
+                    <a href="/Admin">
                         <button type="button" class="btn btn-danger"><span class="text-capitalize" style="font-weight: bold;">Cancel</span>
                         </button>
                     </a>

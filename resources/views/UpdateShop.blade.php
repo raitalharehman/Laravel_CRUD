@@ -108,7 +108,7 @@
                     <button type="submit" class="btn btn-success"><span class="text-capitalize"
                                                                         style="font-weight: bold;">Update</span>
                     </button>
-                    <a href="/admin">
+                    <a href="/Admin">
                         <button type="button" class="btn btn-danger"><span class="text-capitalize"
                                                                            style="font-weight: bold;">Cancel</span>
                         </button>

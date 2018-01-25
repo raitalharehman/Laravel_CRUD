@@ -8,9 +8,9 @@
 
     <title>Laravel</title>
 
-@LaravelSweetAlertCSS
+    @LaravelSweetAlertCSS
 
-<!-- Fonts -->
+    <!-- Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -37,7 +37,8 @@
         <h3 style="color: #ffffff">User Info :</h3>
         <div class="pull-right">
             {{Form::open(array('url' => 'logout','method' => 'GET')) }}
-            <button type="button" class="btn-primary" style="padding: 5px; background-color: red;border: 1px solid red">
+            <button type="submit" class="btn-primary"
+                    style="padding: 5px; background-color: #d43f3a;border: 1px solid #d43f3a">
                 Log out
             </button>
             {{Form::close() }}
@@ -168,29 +169,30 @@
                style="color:#000000;font-weight: bold;">
             {{--<thead>--}}
             {{--<tr style="color: #238c59;font-weight: bold; font-size: 18px;">--}}
-                {{--<th class="text-center">ID</th>--}}
-                {{--<th>Product Name</th>--}}
-                {{--<th>Shop Name</th>--}}
-                {{--<th>Created by:</th>--}}
-                {{--<th>Created at:</th>--}}
+            {{--<th class="text-center">ID</th>--}}
+            {{--<th>Product Name</th>--}}
+            {{--<th>Shop Name</th>--}}
+            {{--<th>Created by:</th>--}}
+            {{--<th>Created at:</th>--}}
             {{--</tr>--}}
             {{--</thead>--}}
             <tbody>
             @foreach($logs as $product)
                 {{--<tr style="color: #000000; font-weight: bold">--}}
-                    {{--<td class="text-center">{{$product -> id}}</td>--}}
-                    {{--<td>{{$product -> product_name}}</td>--}}
-                    {{--@foreach($product->shop as $shop)--}}
-                        {{--<td>{{$shop -> shop_name}}</td>--}}
-                    {{--@endforeach--}}
-                    {{--<td>{{$product -> user->name}}</td>--}}
-                    {{--<td>{{$product -> created_at}}</td>--}}
+                {{--<td class="text-center">{{$product -> id}}</td>--}}
+                {{--<td>{{$product -> product_name}}</td>--}}
+                {{--@foreach($product->shop as $shop)--}}
+                {{--<td>{{$shop -> shop_name}}</td>--}}
+                {{--@endforeach--}}
+                {{--<td>{{$product -> user->name}}</td>--}}
+                {{--<td>{{$product -> created_at}}</td>--}}
 
                 {{--</tr>--}}
-                <li style="color: white;font-size: 18px; font-weight: bold">New Product "{{$product->product_name}}" has been added to
-                @foreach($product->shop as $shop)
-                    {{$shop -> shop_name}}
-                @endforeach
+                <li style="color: white;font-size: 18px; font-weight: bold">New Product "{{$product->product_name}}" has
+                    been added to
+                    @foreach($product->shop as $shop)
+                        {{$shop -> shop_name}}
+                    @endforeach
                     by {{$product->user->name}} at {{$product -> created_at}}</li>
             @endforeach
             </tbody>
